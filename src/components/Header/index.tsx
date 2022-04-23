@@ -1,5 +1,5 @@
-import { Flex, Input, Text, Icon } from "@chakra-ui/react";
-import {RiSearch2Line} from 'react-icons/ri'
+import { Flex, Input, Text, Icon, HStack, Box, Avatar } from "@chakra-ui/react";
+import {RiNotification3Line, RiSearch2Line, RiUserAddLine} from 'react-icons/ri'
 
 
 export function Header() {
@@ -15,7 +15,7 @@ export function Header() {
       bg='gray.800'
     >
         <Text 
-          fontSize='4xl' 
+          fontSize='3xl' 
           fontWeight='bold' 
           letterSpacing='tight'
           w='64'
@@ -40,8 +40,8 @@ export function Header() {
           <Input 
            color='gray.50'
            variant='unstyled' 
-           px='4'
-           mr='4'
+           px='3'
+           mr='3'
            placeholder="Platform search "
            _placeholder={{ color: 'gray.400' }}
           />
@@ -51,6 +51,38 @@ export function Header() {
             cursor='pointer'
             fontSize='20'
          />
+        </Flex>
+
+        <Flex
+          align='center'
+          ml='auto'
+        >
+          <HStack 
+            spacing='8' 
+            cursor='pointer'
+            mx='8'
+            pr='8'
+            py='1'
+            color='gray.300'
+            borderRightWidth={1}
+            borderColor='gray.700'
+            > 
+            <Icon as={RiNotification3Line} fontSize='20'/>
+            <Icon as={RiUserAddLine} fontSize='20'/>
+          </HStack>
+
+          <Flex align='center'>
+            <Box mr='2' textAlign='right'>
+              <Text>
+                Giovanni Crabi
+                </Text>
+              <Text color='gray.300' fontSize='sm'> 
+                giovanni_crabi@hotmail.com
+              </Text>
+            </Box>
+
+            <Avatar size='md' src="https://github.com/GiovanniCrabi"/>
+          </Flex>
         </Flex>
     </Flex>
   );
