@@ -20,10 +20,8 @@ export function Header() {
           letterSpacing='tight'
           w='64'
         >
-          DashGo
-          <Text as='span' color='pink.500'>.</Text>
+          Rocket 🚀
         </Text>
-
         <Flex
           as='label'
           flex='1'
